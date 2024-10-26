@@ -1,0 +1,25 @@
+
+// Fibonacci Series Using GreyMatter //
+
+FUNCTION fibonacci( n ) {
+    
+    a = 0
+    b = 1
+    
+    PRINT("Fibonacci Sequence : ")
+    
+    FOR( i = 0 ; i <= n ; i++ ){
+    
+         PRINT( a )
+
+         temp = a
+         a = b
+         b = temp + b 
+        
+    }
+
+}
+
+n = 10
+fibonacci(n)
+

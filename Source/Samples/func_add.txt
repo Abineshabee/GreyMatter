@@ -1,0 +1,24 @@
+// This is a Example code //
+
+FUNCTION add( a , b ){
+         
+         c = a + b
+         FEEDBACK( c ) 
+         
+         }
+         
+WHILE( 1 ) {
+     
+     ECHO
+     x = INT( INPUT("Enter The Number1 :"))
+     y = INT( INPUT("Enter The Number2 :"))
+     
+     sum = add( x , y )
+     
+     ECHO
+     PRINT("sum of ", x ," and ", y ," : ", sum )
+     
+}
+
+
+

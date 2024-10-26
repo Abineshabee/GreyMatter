@@ -1,0 +1,32 @@
+
+FUNCTION isprime( n ){
+      x = n
+      n -= 1
+      flag = 1
+      FOR(  2 , n ){
+          IF( x % fori == 0 ){
+             flag = 0
+          }
+     }
+     
+     FEEDBACK( flag )
+}
+
+WHILE (1){
+
+num = INT( INPUT("Enter The Number : "))
+
+r = isprime( num )
+
+IF ( r == 1 ) {
+
+    PRINT( num , "Is a Prime Number")
+}
+ELSE {
+   
+   PRINT( num , "Is a Not Prime Number")
+    
+}
+
+}
+                  

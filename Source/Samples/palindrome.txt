@@ -1,0 +1,28 @@
+
+
+str = INPUT("Enter The String : ")
+len = LEN( str )
+result = ""
+
+FOR( i = len  - 1 ; i >= 0 ; i-- ){
+    temp = str.FASTTRACK( i ) 
+    result += temp
+}
+
+PRINT( str )
+PRINT( result )
+
+IF( str == result ) {
+
+  PRINT( str ," is a palindrome ")
+  
+} ELSE {
+  
+  PRINT( str ," is not a polindrome ")
+  
+  }
+
+ECHO
+PRINT("END")
+
+ 

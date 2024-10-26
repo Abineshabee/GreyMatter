@@ -1,0 +1,92 @@
+
+FUNCTION add ( x , y ) {
+    c = x + y
+    FEEDBACK(  c  )
+}
+
+FUNCTION subtract ( x , y ) {
+    FEEDBACK( x - y )
+}
+
+FUNCTION multiply ( x , y ) {
+    FEEDBACK( x * y )
+}
+
+FUNCTION divide( x , y ) {
+    IF ( y != 0 ) {
+       FEEDBACK( x / y )
+    } 
+    ELSE { 
+       FEEDBACK ( "Error! Division by zero." ) 
+    }
+}
+
+ 
+FUNCTION calculator( ) {
+   
+   flag =  1
+   
+   WHILE ( flag != 0 ) {
+   
+      ECHO
+      PRINT("SIMPLE CALCULATOR IN GREYMATTER")
+      ECHO
+      PRINT("Select Operation :")
+      ECHO
+      PRINT("[1] ADDITION")
+      PRINT("[2] SUBTRACTION")
+      PRINT("[3] MULTIPLICATION")
+      PRINT("[4] DIVISION")
+      ECHO
+   
+      choice = INT( INPUT("Enter Your Choice : "))
+      
+      ECHO
+      
+      IF( choice == 1 OR choice == 2 OR choice == 3 OR choice == 4 ) {
+          num1 = INT(INPUT("Enter first number  : "))
+          num2 = INT(INPUT("Enter second number : "))
+          
+          ECHO
+          
+          IF ( choice == 1 ) {
+              sum = add( num1 , num2 )
+              PRINT( num1 ," + ", num2 ," = ", sum )
+           }   
+              
+           IF ( choice == 2 ) {
+               sub = subtract( num1 , num2 )
+               PRINT( num1 ," - ", num2 ," = ", sub )
+           }
+           
+           IF ( choice == 3 ) {
+               mul = multiply( num1 , num2 )
+               PRINT( num1 ," * ", num2 ," = ", mul )
+           }
+           
+           IF ( choice == 4 ) {
+               div = divide( num1 , num2 )
+               PRINT( num1 ," / ", num2 ," = ", div )
+           }
+ 
+           ECHO
+           
+           PRINT("[1] Continue")
+           PRINT("[0] EXIT")
+           
+           flag = INT( INPUT("Enter Your Option : "))
+           
+      }
+      
+      ELSE { 
+      
+           PRINT("INVALID CHOICE ( OR ) OPTION [ try again ].")
+           
+      }
+      
+  }
+           
+}
+
+calculator()
+

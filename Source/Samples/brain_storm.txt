@@ -1,0 +1,23 @@
+
+
+x , y , z = 1 , 2 , 3
+
+BRAINSTORM.READ( x )
+BRAINSTORM.READ( y )
+BRAINSTORM.READ( z )
+
+x , y , z = 4 , 5 , 6
+
+PRINT("x : ", x )
+PRINT("y : ", y )
+PRINT("z : ", z )
+
+ECHO
+
+BRAINSTORM.WRITE( x )
+BRAINSTORM.WRITE( y )
+BRAINSTORM.WRITE( z )
+
+ECHO
+
+BRAINSTORM.GET(  )
