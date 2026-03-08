@@ -1,41 +1,51 @@
 # GreyMatter Programming Language
 
-GreyMatter is a **toy programming language interpreter written in Python** designed to help beginners learn programming concepts quickly and easily. The language focuses on simple syntax, readable structure, and interactive execution, making it ideal for understanding how programming languages work internally.
+GreyMatter is a **toy programming language interpreter implemented in Python**. The language is designed to help beginners learn programming concepts quickly and easily through a simplified syntax and interactive execution environment.
 
-GreyMatter demonstrates the basic principles of **interpreter design, scripting languages, and programming fundamentals** while remaining lightweight and beginner-friendly.
+GreyMatter focuses on teaching fundamental programming concepts such as **variables, loops, functions, conditionals, and user input** while demonstrating how interpreters work internally.
+
+---
+
+# Inspiration
+
+The **GreyMatter programming language** was inspired by the character **Grey Matter** from the animated series **Ben 10**.
+
+In the series, Grey Matter represents intelligence, analytical thinking, and problem-solving abilities. This idea inspired the creation of a programming language that encourages logical thinking and experimentation while learning programming fundamentals.
 
 ---
 
 # Motivation
 
-Many new programmers find it difficult to start learning programming due to complex syntax and unfamiliar programming concepts. GreyMatter was created to:
+Learning programming can be difficult for beginners due to complex syntax and unfamiliar concepts. GreyMatter was developed to:
 
 * Simplify programming syntax
-* Demonstrate interpreter-based language execution
-* Help beginners understand how programming languages work internally
-* Provide an experimental platform for learning language design
+* Help beginners understand programming logic
+* Demonstrate interpreter design concepts
+* Provide a lightweight experimental programming environment
+* Encourage exploration of language design and systems programming
 
 ---
 
 # Features
 
-* Simple and readable syntax
+* Simple and beginner-friendly syntax
 * Python-based interpreter
-* Interactive CLI execution
+* Interactive command-line interface
 * Variable assignments
-* Functions and recursion support
+* Arithmetic operations
 * Conditional statements
-* Loops (`WHILE`, `FOR`)
+* Loops (WHILE, FOR)
 * User input and output
-* Built-in utilities
-* Dictionary-style data storage with `BRAINSTORM`
-* Educational interpreter structure
+* Function definitions
+* Built-in helper utilities
+* Dictionary-style storage using **BRAINSTORM**
+* Educational interpreter implementation
 
 ---
 
 # Tech Stack
 
-Language Used
+Language
 
 * Python
 
@@ -43,28 +53,28 @@ Concepts Implemented
 
 * Interpreter design
 * Runtime execution
-* Custom language syntax
+* Custom scripting syntax
 * Control flow
 * Function handling
-* Basic data operations
+* Command-line interpreter
 
 ---
 
 # Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
 git clone https://github.com/Abineshabee/GreyMatter.git
 ```
 
-Navigate into the project folder:
+Navigate to the directory
 
 ```bash
 cd GreyMatter
 ```
 
-Make sure Python is installed:
+Check Python installation
 
 ```bash
 python --version
@@ -72,15 +82,15 @@ python --version
 
 ---
 
-# Running GreyMatter Programs
+# Running GreyMatter
 
-Run a GreyMatter script file:
+### Run a program file
 
 ```bash
 python app.py calculator.txt
 ```
 
-Run the **interactive CLI interpreter**:
+### Run interactive CLI
 
 ```bash
 python GreyMatter.py
@@ -101,12 +111,17 @@ ________________________________________
   ║ ╦╠╦╝║╣ ╚╦╝║║║╠═╣ ║  ║ ║╣ ╠╦╝
   ╚═╝╩╚═╚═╝ ╩ ╩ ╩╩ ╩ ╩  ╩ ╚═╝╩╚═
 ________________________________________
+```
 
+Example interaction
+
+```
 -> PRINT("hello World")
 
 hello World
 
 -> x = 1
+
 -> WHILE ( x <= 10 ){
 -> PRINT( x )
 -> x += 1
@@ -126,14 +141,16 @@ hello World
 
 ---
 
-# Language Syntax Examples
+# Language Syntax
 
-## Example 1 – Basic Variables and Output
+## Variables
+
+Variables are dynamically created during assignment.
 
 ```
 x = 5
 y = 6
-PRINT( x + y )
+PRINT(x + y)
 ```
 
 Output
@@ -144,165 +161,205 @@ Output
 
 ---
 
-# Example 2 – Using BRAINSTORM Storage
+# Input and Output
+
+```
+name = INPUT("Enter your name : ")
+PRINT("Hello ", name)
+```
+
+---
+
+# Data Storage (BRAINSTORM)
+
+GreyMatter includes a built-in storage system similar to dictionaries.
 
 ```
 x , y , z = 1 , 2 , 3
 
-BRAINSTORM.READ( x )
-BRAINSTORM.READ( y )
-BRAINSTORM.READ( z )
+BRAINSTORM.READ(x)
+BRAINSTORM.READ(y)
+BRAINSTORM.READ(z)
 
 x , y , z = 4 , 5 , 6
 
-PRINT("x : ", x )
-PRINT("y : ", y )
-PRINT("z : ", z )
-
-ECHO
-
-BRAINSTORM.WRITE( x )
-BRAINSTORM.WRITE( y )
-BRAINSTORM.WRITE( z )
-
-ECHO
+BRAINSTORM.WRITE(x)
+BRAINSTORM.WRITE(y)
+BRAINSTORM.WRITE(z)
 
 BRAINSTORM.GET()
 ```
 
-This works similar to a **dictionary-like storage system**.
+---
+
+# Conditional Statements
+
+```
+IF (x > 10) {
+    PRINT("Large number")
+}
+ELSE {
+    PRINT("Small number")
+}
+```
 
 ---
 
-# Example 3 – Functions and Calculator
+# Loops
+
+## WHILE Loop
+
+```
+x = 1
+
+WHILE (x <= 5) {
+
+   PRINT(x)
+   x += 1
+
+}
+```
+
+---
+
+## FOR Loop
+
+```
+FOR(i = 0 ; i <= 10 ; i++){
+   PRINT(i)
+}
+```
+
+---
+
+# Functions
+
+Functions are defined using the **FUNCTION** keyword.
+
+```
+FUNCTION add(x , y){
+
+   result = x + y
+   FEEDBACK(result)
+
+}
+```
+
+Example usage
+
+```
+sum = add(5 , 6)
+PRINT(sum)
+```
+
+---
+
+# Example Programs
+
+## Calculator
 
 ```
 FUNCTION add ( x , y ) {
     c = x + y
-    FEEDBACK( c )
-}
-
-FUNCTION subtract ( x , y ) {
-    FEEDBACK( x - y )
-}
-
-FUNCTION multiply ( x , y ) {
-    FEEDBACK( x * y )
-}
-
-FUNCTION divide( x , y ) {
-    IF ( y != 0 ) {
-       FEEDBACK( x / y )
-    }
-    ELSE {
-       FEEDBACK ( "Error! Division by zero." )
-    }
+    FEEDBACK(c)
 }
 ```
+
+Users can choose operations and perform calculations interactively.
 
 ---
 
-# Example 4 – Fibonacci Series
+## Fibonacci Series
 
 ```
-FUNCTION fibonacci( n ) {
+FUNCTION fibonacci(n){
 
-    a = 0
-    b = 1
+   a = 0
+   b = 1
 
-    PRINT("Fibonacci Sequence : ")
+   FOR(i = 0 ; i <= n ; i++){
 
-    FOR( i = 0 ; i <= n ; i++ ){
+       PRINT(a)
 
-         PRINT( a )
+       temp = a
+       a = b
+       b = temp + b
 
-         temp = a
-         a = b
-         b = temp + b
-
-    }
-
-}
-
-n = 10
-fibonacci(n)
-```
-
----
-
-# Example 5 – Simple Addition Loop
-
-```
-FUNCTION add( a , b ){
-
-    c = a + b
-    FEEDBACK( c )
-
-}
-
-WHILE( 1 ) {
-
-     x = INT( INPUT("Enter The Number1 :"))
-     y = INT( INPUT("Enter The Number2 :"))
-
-     sum = add( x , y )
-
-     PRINT("sum of ", x ," and ", y ," : ", sum )
+   }
 
 }
 ```
 
 ---
 
-# Example 6 – Prime Number Checker
+## Prime Number Checker
 
 ```
-FUNCTION isprime( n ){
+FUNCTION isprime(n){
 
-      x = n
-      n -= 1
-      flag = 1
+   flag = 1
 
-      FOR( 2 , n ){
-          IF( x % fori == 0 ){
-             flag = 0
-          }
+   FOR(2 , n){
+
+      IF(n % fori == 0){
+         flag = 0
       }
 
-      FEEDBACK( flag )
+   }
+
+   FEEDBACK(flag)
+
 }
 ```
 
 ---
 
-# Example 7 – Palindrome Checker
+## Palindrome Checker
 
 ```
 str = INPUT("Enter The String : ")
-len = LEN( str )
+
+len = LEN(str)
 result = ""
 
-FOR( i = len - 1 ; i >= 0 ; i-- ){
+FOR(i = len - 1 ; i >= 0 ; i--){
 
-    temp = str.FASTTRACK( i )
-    result += temp
-
-}
-
-PRINT( str )
-PRINT( result )
-
-IF( str == result ) {
-
-  PRINT( str ," is a palindrome ")
-
-} ELSE {
-
-  PRINT( str ," is not a palindrome ")
+   temp = str.FASTTRACK(i)
+   result += temp
 
 }
 
-PRINT("END")
+PRINT(result)
+```
+
+---
+
+# Built-in Utilities
+
+| Function    | Description                |
+| ----------- | -------------------------- |
+| PRINT()     | Output values              |
+| INPUT()     | User input                 |
+| INT()       | Integer conversion         |
+| LEN()       | String length              |
+| ECHO        | Print empty line           |
+| FEEDBACK()  | Return value from function |
+| FASTTRACK() | Character indexing         |
+
+---
+
+# Project Structure
+
+```
+GreyMatter
+│
+├── GreyMatter.py
+├── app.py
+├── examples
+│   ├── calculator.txt
+│   ├── fibonacci.txt
+│
+└── README.md
 ```
 
 ---
@@ -311,27 +368,26 @@ PRINT("END")
 
 This project helps understand:
 
-* How interpreters work
-* Programming language syntax design
-* Execution engines
-* Control flow implementation
-* Function parsing and execution
-* CLI interpreter design
+* Programming language design
+* Interpreter execution model
+* Control flow parsing
+* Function execution
+* CLI interpreter development
+* Python systems programming
 
 ---
 
 # Future Improvements
 
-Possible future improvements for GreyMatter:
+Planned improvements include:
 
-* Error handling improvements
-* Module system
-* File operations
-* Standard library
-* Package manager
-* Syntax highlighting
-* Bytecode execution
+* Better error handling
+* Standard library support
+* Modules and packages
+* Debugging tools
+* Bytecode interpreter
 * Performance optimization
+* Syntax highlighting
 
 ---
 
@@ -346,8 +402,7 @@ GitHub
 
 # License
 
-Created For Educational Purposes.
+This Project Is Created For Educational Purposes.
 
 ---
 
-If you want, I can also show you **4 improvements that can make this repo look like a real programming language project and attract recruiters**.
