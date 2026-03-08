@@ -845,4 +845,7 @@ GitHub
 [https://github.com/Abineshabee](https://github.com/Abineshabee)
 
 ---
+## License
 
+This project is licensed under the [GNU General Public License v3.0](LICENSE) - see the [LICENSE](LICENSE) file for details.
+---
