@@ -3,78 +3,80 @@
 
 # GreyMatter Programming Language
 
-GreyMatter is a lightweight experimental programming language designed and implemented in Python for educational and learning purposes. The main objective of the GreyMatter language is to help beginners understand the core concepts behind programming language design, interpreters, lexical analysis, parsing, and runtime execution.
+GreyMatter is an experimental programming language developed in Python with the goal of helping students and developers understand how programming languages work internally. The language demonstrates fundamental concepts behind interpreters, lexical analysis, parsing, syntax evaluation, and runtime execution.
 
-The language provides a simple and expressive syntax that allows developers and students to write programs easily while exploring how a custom programming language works internally. GreyMatter supports many fundamental programming constructs including variables, arithmetic expressions, loops, conditional statements, functions, and built-in utilities.
+Unlike production programming languages that prioritize performance and large ecosystems, GreyMatter focuses on simplicity, experimentation, and educational exploration. The syntax is intentionally designed to be simple and expressive so that beginners can easily understand how a custom programming language behaves.
 
-GreyMatter focuses on simplicity, creativity, and educational exploration. Instead of building a highly optimized production language, the goal is to demonstrate how a programming language can be created from scratch using Python.
+GreyMatter includes many core programming constructs such as variables, arithmetic operations, conditionals, loops, functions, and built-in utilities. The interpreter processes user code through several internal steps including tokenization, parsing, abstract syntax tree construction, and execution.
 
-The project was created to help learners explore topics such as:
+The project is implemented in Python and uses **SLY** for building the lexer and parser components of the interpreter.
 
-* Interpreter design
-* Programming language implementation
-* Abstract Syntax Tree execution
-* Parsing and lexical analysis
-* Runtime evaluation of expressions
+GreyMatter is primarily intended for:
 
-GreyMatter is implemented using Python and parsing tools based on **SLY**, which provides an efficient way to build lexers and parsers.
+* Learning programming language design
+* Understanding interpreter development
+* Exploring syntax parsing techniques
+* Experimenting with custom programming languages
+* Educational demonstrations for computer science students
 
 ---
 
 # Inspiration
 
-The name **GreyMatter** and the design philosophy of this language are inspired by the intelligent alien character **Grey Matter** from the animated television series **Ben 10**.
+The concept and name of GreyMatter were inspired by the highly intelligent alien **Grey Matter** from the animated television series **Ben 10**.
 
-In the Ben 10 universe, Grey Matter is known for extraordinary intelligence, problem-solving ability, and analytical thinking. Inspired by this concept, the GreyMatter programming language represents logical thinking, experimentation, and innovation in programming.
+In the Ben 10 universe, Grey Matter represents intelligence, analytical thinking, and problem solving. This programming language was created with a similar philosophy: encouraging logical thinking and experimentation through programming.
 
-Many of the built-in function names in GreyMatter are inspired by **alien characters and abilities from the Ben 10 cartoon universe**. These names symbolically represent different capabilities or behaviors of the language.
+Many built-in functions in the GreyMatter language are named after **alien characters and abilities from the Ben 10 universe**. These names symbolize the different abilities and operations the language can perform.
 
 ---
 
-# Project Goals
+# Project Objectives
 
-The key objectives of the GreyMatter project include:
+The GreyMatter project was designed with the following goals:
 
-* Teaching the fundamentals of interpreter development
-* Demonstrating how programming languages are implemented
-* Providing an experimental platform for language design
-* Encouraging students to explore compiler and interpreter concepts
-* Creating a fun and creative programming environment
+• Demonstrate how programming languages are implemented
+• Provide an educational interpreter written in Python
+• Help students learn parsing and syntax evaluation
+• Encourage experimentation with programming language design
+• Combine creativity with programming concepts
 
 ---
 
 # Technology Stack
 
-GreyMatter is built using the following technologies:
+GreyMatter is implemented using the following technologies:
 
-* Python Programming Language
-* Lexer and Parser implemented with **SLY**
-* Abstract Syntax Tree (AST) execution model
-* Standard Python runtime libraries
+| Technology              | Purpose                         |
+| ----------------------- | ------------------------------- |
+| Python                  | Core interpreter implementation |
+| SLY                     | Lexer and parser construction   |
+| AST Model               | Program execution structure     |
+| Python Standard Library | Utility functions               |
 
 ---
 
 # Core Language Features
 
-GreyMatter provides the following programming capabilities:
+GreyMatter includes the following features:
 
-* Variable declaration and assignment
+* Dynamic variables
 * Arithmetic expressions
-* Conditional statements
-* Logical operations
-* Loop constructs
-* Function definitions
-* Input and output handling
-* String utilities
-* Memory storage system
+* Conditional logic
+* Logical operators
+* Loop structures
+* User-defined functions
+* Built-in utility functions
+* String manipulation
 * Time utilities
-* Experimental AI and Web query features
+* Memory storage utilities
+* Experimental web and AI query features
 
 ---
 
-# Basic Syntax Example
+# Basic Program Example
 
-```
+```python
 x = 10
 y = 20
 
@@ -83,26 +85,38 @@ z = x + y
 PRINT(z)
 ```
 
+Output
+
+```
+30
+```
+
 ---
 
 # Variables
 
-Variables are dynamically created during assignment.
+Variables in GreyMatter are dynamically typed. They are automatically created when a value is assigned.
 
-Example:
+Example
 
+```python
+name = "Abinesh"
+age = 21
+score = 95
 ```
-x = 5
-name = "GreyMatter"
-```
 
-There is no need for explicit type declaration.
+Example program
+
+```python
+name = INPUT("Enter your name: ")
+PRINT("Hello", name)
+```
 
 ---
 
-# Arithmetic Operators
+# Arithmetic Operations
 
-GreyMatter supports common arithmetic operators.
+GreyMatter supports basic mathematical operations.
 
 | Operator | Description    |
 | -------- | -------------- |
@@ -112,93 +126,207 @@ GreyMatter supports common arithmetic operators.
 | /        | Division       |
 | %        | Modulus        |
 
-Example:
+Example
 
-```
+```python
 x = 10
 y = 3
 
 PRINT(x + y)
+PRINT(x - y)
 PRINT(x * y)
+PRINT(x / y)
+PRINT(x % y)
+```
+
+Output
+
+```
+13
+7
+30
+3.33
+1
 ```
 
 ---
 
 # Increment and Decrement
 
-```
+GreyMatter allows increment and decrement operators.
+
+Example
+
+```python
+x = 5
 x++
+PRINT(x)
+```
+
+Output
+
+```
+6
+```
+
+Example
+
+```python
+x = 10
 x--
+PRINT(x)
+```
+
+Output
+
+```
+9
 ```
 
 ---
 
 # Compound Assignment
 
-```
+Compound assignments simplify arithmetic updates.
+
+Example
+
+```python
+x = 10
+
 x += 5
+PRINT(x)
+```
+
+Output
+
+```
+15
+```
+
+Other operators
+
+```python
 x -= 3
 x *= 2
 x /= 4
+x %= 3
 ```
 
 ---
 
-# Input and Output
+# Input and Output Functions
 
-### PRINT
+---
 
-Displays output to the console.
+# PRINT()
+
+The PRINT function displays output to the console.
+
+Example
+
+```python
+PRINT("Welcome to GreyMatter")
+```
+
+Example with variables
+
+```python
+name = "Developer"
+PRINT("Hello", name)
+```
+
+Output
 
 ```
-PRINT("Hello World")
+Hello Developer
 ```
 
 ---
 
-### INPUT
+# INPUT()
 
-Reads user input.
+INPUT reads text input from the user.
 
-```
-name = INPUT("Enter name: ")
-```
+Example
 
----
-
-### INT
-
-Converts input to integer.
-
-```
-age = INT(INPUT("Enter age: "))
+```python
+name = INPUT("Enter your name: ")
+PRINT(name)
 ```
 
 ---
 
-### STR
+# INT()
 
-Converts input to string.
+Converts a value to an integer.
 
+Example
+
+```python
+age = INT(INPUT("Enter your age: "))
+PRINT(age)
 ```
-text = STR(INPUT("Enter message: "))
+
+---
+
+# STR()
+
+Converts a value to a string.
+
+Example
+
+```python
+number = 100
+text = STR(number)
+PRINT(text)
 ```
 
 ---
 
 # Conditional Statements
 
-Example:
+GreyMatter supports conditional logic using IF and ELSE.
 
-```
-IF (x > 10) {
+Example
 
-   PRINT("Greater")
+```python
+age = INT(INPUT("Enter age: "))
+
+IF(age >= 18){
+
+   PRINT("Eligible to vote")
 
 }
-ELSE {
+ELSE{
 
-   PRINT("Smaller")
+   PRINT("Not eligible")
+
+}
+```
+
+---
+
+# Comparison Operators
+
+| Operator | Description           |
+| -------- | --------------------- |
+| ==       | Equal                 |
+| !=       | Not Equal             |
+| >        | Greater Than          |
+| <        | Less Than             |
+| >=       | Greater Than or Equal |
+| <=       | Less Than or Equal    |
+
+Example
+
+```python
+x = 10
+y = 5
+
+IF(x > y){
+
+   PRINT("x is greater")
 
 }
 ```
@@ -212,53 +340,94 @@ ELSE {
 | AND      | Logical AND |
 | OR       | Logical OR  |
 
----
+Example
 
-# Loops
+```python
+x = 10
+y = 20
 
-### While Loop
+IF(x > 5 AND y < 30){
 
-```
-x = 1
-
-WHILE(x <= 5){
-
-  PRINT(x)
-  x++
+   PRINT("Condition satisfied")
 
 }
 ```
 
 ---
 
-### For Loop
+# Loops
+
+---
+
+# WHILE Loop
+
+Example
+
+```python
+x = 1
+
+WHILE(x <= 5){
+
+   PRINT(x)
+   x++
+
+}
+```
+
+Output
 
 ```
-FOR(i = 0 ; i <= 10 ; i++){
+1
+2
+3
+4
+5
+```
+
+---
+
+# FOR Loop
+
+Example
+
+```python
+FOR(i = 0 ; i <= 5 ; i++){
 
    PRINT(i)
 
 }
 ```
 
-Short loop:
+---
 
-```
-FOR(5){
+Short loop example
 
- PRINT("Hello")
+```python
+FOR(3){
+
+   PRINT("GreyMatter")
 
 }
+```
+
+Output
+
+```
+GreyMatter
+GreyMatter
+GreyMatter
 ```
 
 ---
 
 # Functions
 
-Functions allow reusable code blocks.
+Functions allow code reuse.
 
-```
-FUNCTION add(x , y){
+Example
+
+```python
+FUNCTION add(x,y){
 
    result = x + y
    FEEDBACK(result)
@@ -266,121 +435,405 @@ FUNCTION add(x , y){
 }
 ```
 
-Calling the function:
+Calling function
 
-```
-sum = add(5 , 6)
+```python
+sum = add(5,6)
 PRINT(sum)
 ```
 
----
-
-# Return Statement
-
-GreyMatter uses the keyword **FEEDBACK** instead of return.
+Output
 
 ```
+11
+```
+
+---
+
+# FEEDBACK Statement
+
+FEEDBACK returns values from functions.
+
+Example
+
+```python
 FUNCTION square(x){
 
-   FEEDBACK(x * x)
+   FEEDBACK(x*x)
+
+}
+```
+
+Example call
+
+```python
+PRINT(square(4))
+```
+
+Output
+
+```
+16
+```
+
+---
+
+# Built-in Utility Functions
+
+Many functions in GreyMatter are named after alien abilities from the **Ben 10 universe**.
+
+---
+
+# ECHO
+
+Prints a blank line.
+
+Example
+
+```python
+PRINT("Hello")
+ECHO
+PRINT("World")
+```
+
+---
+
+# ECHOECHO
+
+Prints multiple blank lines.
+
+Example
+
+```python
+PRINT("Start")
+ECHOECHO
+PRINT("End")
+```
+
+---
+
+# LEN()
+
+Returns length of a string.
+
+Example
+
+```python
+text = "GreyMatter"
+PRINT(LEN(text))
+```
+
+Output
+
+```
+10
+```
+
+---
+
+# FASTTRACK()
+
+Returns character at a given index.
+
+Example
+
+```python
+word = "hello"
+PRINT(word.FASTTRACK(1))
+```
+
+Output
+
+```
+e
+```
+
+---
+
+# WAYBIG()
+
+Converts text to uppercase.
+
+Example
+
+```python
+text = "hello"
+PRINT(text.WAYBIG())
+```
+
+Output
+
+```
+HELLO
+```
+
+---
+
+# NANOMECH()
+
+Converts text to lowercase.
+
+Example
+
+```python
+text = "HELLO"
+PRINT(text.NANOMECH())
+```
+
+Output
+
+```
+hello
+```
+
+---
+
+# ISWAYBIG()
+
+Checks whether text is uppercase.
+
+Example
+
+```python
+text = "HELLO"
+
+PRINT(text.ISWAYBIG())
+```
+
+Output
+
+```
+True
+```
+
+---
+
+# ISNANOMECH()
+
+Checks whether text is lowercase.
+
+Example
+
+```python
+text = "hello"
+
+PRINT(text.ISNANOMECH())
+```
+
+Output
+
+```
+True
+```
+
+---
+
+# PARADOX Time Utilities
+
+---
+
+# PARADOX.SLEEP()
+
+Pauses program execution.
+
+Example
+
+```python
+PRINT("Start")
+PARADOX.SLEEP(3)
+PRINT("End")
+```
+
+---
+
+# PARADOX.UNITIME()
+
+Returns system time.
+
+Example
+
+```python
+PRINT(PARADOX.UNITIME())
+```
+
+---
+
+# PARADOX.UNIDATE()
+
+Returns system date.
+
+Example
+
+```python
+PRINT(PARADOX.UNIDATE())
+```
+
+---
+
+# BRAINSTORM Memory System
+
+BRAINSTORM is a simple data storage system inside GreyMatter.
+
+---
+
+# BRAINSTORM.READ()
+
+Stores value in memory.
+
+Example
+
+```python
+BRAINSTORM.READ(10)
+BRAINSTORM.READ(20)
+```
+
+---
+
+# BRAINSTORM.WRITE()
+
+Writes value to memory.
+
+Example
+
+```python
+BRAINSTORM.WRITE(x)
+```
+
+---
+
+# BRAINSTORM.GET()
+
+Retrieves stored data.
+
+Example
+
+```python
+BRAINSTORM.GET()
+```
+
+---
+
+# JETRAY()
+
+Executes fast interpreter commands.
+
+Example
+
+```python
+JETRAY("system_task")
+```
+
+---
+
+# Web Search Feature
+
+Example
+
+```python
+PRINT(@WEB_SEARCH "Python programming language")
+```
+
+---
+
+# AI Query Feature
+
+Example
+
+```python
+PRINT(@AI "Explain machine learning")
+```
+
+---
+
+# BREAK Statement
+
+Stops loop execution.
+
+Example
+
+```python
+WHILE(1){
+
+   PRINT("Running")
+
+   BREAK
 
 }
 ```
 
 ---
 
-# Built-in Functions Overview
+# Comments
 
-GreyMatter includes multiple built-in functions and utilities. Many of them are named after alien abilities from the Ben 10 universe.
+GreyMatter supports two comment formats.
+
+Example
+
+```python
+# this is a comment #
+```
+
+Example
+
+```python
+// this is another comment //
+```
 
 ---
 
-# Complete Function List
+# Complete Built-in Function Table
 
-| Function           | Description                                |
-| ------------------ | ------------------------------------------ |
-| PRINT()            | Displays output to the console             |
-| INPUT()            | Accepts input from the user                |
-| INT()              | Converts input or value to integer         |
-| STR()              | Converts value to string                   |
-| LEN()              | Returns length of a string                 |
-| ECHO               | Prints a blank line                        |
-| ECHOECHO           | Prints multiple blank lines                |
-| FASTTRACK()        | Returns character at specific index        |
-| WAYBIG()           | Converts string to uppercase               |
-| NANOMECH()         | Converts string to lowercase               |
-| ISWAYBIG()         | Checks if text is uppercase                |
-| ISNANOMECH()       | Checks if text is lowercase                |
-| PARADOX.SLEEP()    | Pauses program execution                   |
-| PARADOX.UNITIME()  | Returns system time                        |
-| PARADOX.UNIDATE()  | Returns system date                        |
-| BRAINSTORM.READ()  | Stores data in internal memory             |
-| BRAINSTORM.WRITE() | Writes stored data                         |
-| BRAINSTORM.GET()   | Retrieves stored data                      |
-| JETRAY()           | Executes fast interpreter/system operation |
-| @WEB_SEARCH        | Performs web search query                  |
-| @AI                | Sends query to AI service                  |
-| BREAK              | Terminates loop execution                  |
-| FUNCTION           | Declares a function                        |
-| FEEDBACK           | Returns value from function                |
-
----
-
-# Example Program
-
-```
-FUNCTION multiply(x , y){
-
-   FEEDBACK(x * y)
-
-}
-
-x = INT(INPUT("Enter first number: "))
-y = INT(INPUT("Enter second number: "))
-
-result = multiply(x , y)
-
-PRINT("Result:", result)
-```
+| Function           | Description            | Example              |
+| ------------------ | ---------------------- | -------------------- |
+| PRINT()            | Display output         | PRINT("Hello")       |
+| INPUT()            | Get user input         | name = INPUT("Name") |
+| INT()              | Convert to integer     | age = INT(INPUT())   |
+| STR()              | Convert to string      | STR(100)             |
+| LEN()              | Get string length      | LEN("hello")         |
+| FASTTRACK()        | Character index access | word.FASTTRACK(1)    |
+| WAYBIG()           | Convert to uppercase   | text.WAYBIG()        |
+| NANOMECH()         | Convert to lowercase   | text.NANOMECH()      |
+| ISWAYBIG()         | Check uppercase        | text.ISWAYBIG()      |
+| ISNANOMECH()       | Check lowercase        | text.ISNANOMECH()    |
+| ECHO               | Blank line             | ECHO                 |
+| ECHOECHO           | Multiple blank lines   | ECHOECHO             |
+| PARADOX.SLEEP()    | Pause program          | PARADOX.SLEEP(5)     |
+| PARADOX.UNITIME()  | Get system time        | PARADOX.UNITIME()    |
+| PARADOX.UNIDATE()  | Get system date        | PARADOX.UNIDATE()    |
+| BRAINSTORM.READ()  | Store value            | BRAINSTORM.READ(x)   |
+| BRAINSTORM.WRITE() | Write memory value     | BRAINSTORM.WRITE(x)  |
+| BRAINSTORM.GET()   | Retrieve stored values | BRAINSTORM.GET()     |
+| JETRAY()           | Execute fast operation | JETRAY(cmd)          |
+| @WEB_SEARCH        | Web search query       | @WEB_SEARCH "Python" |
+| @AI                | AI query system        | @AI "Explain AI"     |
+| BREAK              | Exit loop              | BREAK                |
+| FUNCTION           | Define function        | FUNCTION add(x,y)    |
+| FEEDBACK           | Return value           | FEEDBACK(x+y)        |
 
 ---
 
 # Interpreter Architecture
 
-GreyMatter follows a typical interpreter architecture:
+GreyMatter follows a traditional interpreter architecture:
 
-1. Lexical Analysis (Tokenizer)
+1. Lexical Analysis (Tokenization)
 2. Syntax Parsing
-3. Abstract Syntax Tree Construction
-4. Runtime Evaluation
+3. Abstract Syntax Tree (AST) Generation
+4. Runtime Execution Engine
 
-This architecture allows programs written in GreyMatter to be parsed and executed dynamically.
+This architecture allows the interpreter to process and execute GreyMatter programs dynamically.
 
 ---
 
-# Educational Value
+# Educational Benefits
 
-This project helps developers learn about:
+GreyMatter helps developers learn:
 
 * Programming language design
-* Interpreter development
-* Parsing algorithms
-* Runtime execution models
+* Interpreter construction
+* Parsing techniques
+* Runtime evaluation
 * Custom language experimentation
-
----
-
-# Future Improvements
-
-Potential improvements include:
-
-* File input/output support
-* Standard library modules
-* Error handling system
-* Debugging tools
-* Bytecode compilation
-* Package manager
-* IDE integration
 
 ---
 
