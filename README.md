@@ -1,112 +1,353 @@
-abinesh@abinesh-Lenovo-E41-25:~\>> source py-run/bin/activate
+# GreyMatter Programming Language
 
-(py-run) abinesh@abinesh-Lenovo-E41-25:~\>> cd Programs/c/test/Source
+GreyMatter is a **toy programming language interpreter written in Python** designed to help beginners learn programming concepts quickly and easily. The language focuses on simple syntax, readable structure, and interactive execution, making it ideal for understanding how programming languages work internally.
 
-(py-run) abinesh@abinesh-Lenovo-E41-25:~/Programs/c/test/Source\>> ls
+GreyMatter demonstrates the basic principles of **interpreter design, scripting languages, and programming fundamentals** while remaining lightweight and beginner-friendly.
 
-app.py  Compiler.py  GreyMatter.py  LexerParser.py  __pycache__  Samples  tgpt
+---
 
-    (py-run) abinesh@abinesh-Lenovo-E41-25:~/Programs/c/test/Source\>> python app.py calculator.txt
+# Motivation
 
-WARNING: 912 shift/reduce conflicts
+Many new programmers find it difficult to start learning programming due to complex syntax and unfamiliar programming concepts. GreyMatter was created to:
 
-WARNING: 52 reduce/reduce conflicts
-	
-SIMPLE CALCULATOR IN GREYMATTER
-	
-Select Operation :
-	
-[1] ADDITION
+* Simplify programming syntax
+* Demonstrate interpreter-based language execution
+* Help beginners understand how programming languages work internally
+* Provide an experimental platform for learning language design
 
-[2] SUBTRACTION
+---
 
-[3] MULTIPLICATION
+# Features
 
-[4] DIVISION
-	
-Enter Your Choice : 1
-	
+* Simple and readable syntax
+* Python-based interpreter
+* Interactive CLI execution
+* Variable assignments
+* Functions and recursion support
+* Conditional statements
+* Loops (`WHILE`, `FOR`)
+* User input and output
+* Built-in utilities
+* Dictionary-style data storage with `BRAINSTORM`
+* Educational interpreter structure
 
-Enter first number  : 12123
+---
 
-Enter second number : 2233323
-	
-12123  +  2233323  =  2245446
-	
+# Tech Stack
 
-[1] Continue
+Language Used
 
-[0] EXIT
+* Python
 
-Enter Your Option : 0
+Concepts Implemented
 
-(py-run) abinesh@abinesh-Lenovo-E41-25:~/Programs/c/test/Source\>> ls
+* Interpreter design
+* Runtime execution
+* Custom language syntax
+* Control flow
+* Function handling
+* Basic data operations
 
-app.py  Compiler.py  GreyMatter.py  LexerParser.py  __pycache__  Samples  tgpt
-  
-    (py-run) abinesh@abinesh-Lenovo-E41-25:~/Programs/c/test/Source\>> python GreyMatter.py
+---
 
-WARNING: 912 shift/reduce conflicts
+# Installation
 
-WARNING: 52 reduce/reduce conflicts
+Clone the repository:
 
-$ GreyMatter  <--version 0.01 <\> 
+```bash
+git clone https://github.com/Abineshabee/GreyMatter.git
+```
 
-$ Release On Sept 25  <--@--> 2024 <\> 
+Navigate into the project folder:
 
+```bash
+cd GreyMatter
+```
 
+Make sure Python is installed:
 
-    ________________________________________
+```bash
+python --version
+```
 
-      ╔═╗╦═╗╔═╗╦ ╦╔╦╗╔═╗╔╦╗╔╦╗╔═╗╦═╗
-      ║ ╦╠╦╝║╣ ╚╦╝║║║╠═╣ ║  ║ ║╣ ╠╦╝
-      ╚═╝╩╚═╚═╝ ╩ ╩ ╩╩ ╩ ╩  ╩ ╚═╝╩╚═
-    ________________________________________
+---
 
+# Running GreyMatter Programs
 
--> 131121223323+12321312*332  
+Run a GreyMatter script file:
 
-135211898907
+```bash
+python app.py calculator.txt
+```
+
+Run the **interactive CLI interpreter**:
+
+```bash
+python GreyMatter.py
+```
+
+---
+
+# CLI Example
+
+```
+$ GreyMatter <--version 0.01 <>
+
+$ Release On Sept 25 <--@--> 2024 <>
+
+________________________________________
+
+  ╔═╗╦═╗╔═╗╦ ╦╔╦╗╔═╗╔╦╗╔╦╗╔═╗╦═╗
+  ║ ╦╠╦╝║╣ ╚╦╝║║║╠═╣ ║  ║ ║╣ ╠╦╝
+  ╚═╝╩╚═╚═╝ ╩ ╩ ╩╩ ╩ ╩  ╩ ╚═╝╩╚═
+________________________________________
 
 -> PRINT("hello World")
-
-->
 
 hello World
 
 -> x = 1
-
 -> WHILE ( x <= 10 ){
-
-->  PRINT( x )
-
+-> PRINT( x )
 -> x += 1
-
 -> }
 
--> 
-
 1
-
 2
-
 3
-
 4
-
 5
-
 6
-
 7
-
 8
-
 9
-
 10
+```
 
--> exit
+---
 
+# Language Syntax Examples
 
-(py-run) abinesh@abinesh-Lenovo-E41-25:~/Programs/c/test/Source\>> 
+## Example 1 – Basic Variables and Output
+
+```
+x = 5
+y = 6
+PRINT( x + y )
+```
+
+Output
+
+```
+11
+```
+
+---
+
+# Example 2 – Using BRAINSTORM Storage
+
+```
+x , y , z = 1 , 2 , 3
+
+BRAINSTORM.READ( x )
+BRAINSTORM.READ( y )
+BRAINSTORM.READ( z )
+
+x , y , z = 4 , 5 , 6
+
+PRINT("x : ", x )
+PRINT("y : ", y )
+PRINT("z : ", z )
+
+ECHO
+
+BRAINSTORM.WRITE( x )
+BRAINSTORM.WRITE( y )
+BRAINSTORM.WRITE( z )
+
+ECHO
+
+BRAINSTORM.GET()
+```
+
+This works similar to a **dictionary-like storage system**.
+
+---
+
+# Example 3 – Functions and Calculator
+
+```
+FUNCTION add ( x , y ) {
+    c = x + y
+    FEEDBACK( c )
+}
+
+FUNCTION subtract ( x , y ) {
+    FEEDBACK( x - y )
+}
+
+FUNCTION multiply ( x , y ) {
+    FEEDBACK( x * y )
+}
+
+FUNCTION divide( x , y ) {
+    IF ( y != 0 ) {
+       FEEDBACK( x / y )
+    }
+    ELSE {
+       FEEDBACK ( "Error! Division by zero." )
+    }
+}
+```
+
+---
+
+# Example 4 – Fibonacci Series
+
+```
+FUNCTION fibonacci( n ) {
+
+    a = 0
+    b = 1
+
+    PRINT("Fibonacci Sequence : ")
+
+    FOR( i = 0 ; i <= n ; i++ ){
+
+         PRINT( a )
+
+         temp = a
+         a = b
+         b = temp + b
+
+    }
+
+}
+
+n = 10
+fibonacci(n)
+```
+
+---
+
+# Example 5 – Simple Addition Loop
+
+```
+FUNCTION add( a , b ){
+
+    c = a + b
+    FEEDBACK( c )
+
+}
+
+WHILE( 1 ) {
+
+     x = INT( INPUT("Enter The Number1 :"))
+     y = INT( INPUT("Enter The Number2 :"))
+
+     sum = add( x , y )
+
+     PRINT("sum of ", x ," and ", y ," : ", sum )
+
+}
+```
+
+---
+
+# Example 6 – Prime Number Checker
+
+```
+FUNCTION isprime( n ){
+
+      x = n
+      n -= 1
+      flag = 1
+
+      FOR( 2 , n ){
+          IF( x % fori == 0 ){
+             flag = 0
+          }
+      }
+
+      FEEDBACK( flag )
+}
+```
+
+---
+
+# Example 7 – Palindrome Checker
+
+```
+str = INPUT("Enter The String : ")
+len = LEN( str )
+result = ""
+
+FOR( i = len - 1 ; i >= 0 ; i-- ){
+
+    temp = str.FASTTRACK( i )
+    result += temp
+
+}
+
+PRINT( str )
+PRINT( result )
+
+IF( str == result ) {
+
+  PRINT( str ," is a palindrome ")
+
+} ELSE {
+
+  PRINT( str ," is not a palindrome ")
+
+}
+
+PRINT("END")
+```
+
+---
+
+# Learning Outcomes
+
+This project helps understand:
+
+* How interpreters work
+* Programming language syntax design
+* Execution engines
+* Control flow implementation
+* Function parsing and execution
+* CLI interpreter design
+
+---
+
+# Future Improvements
+
+Possible future improvements for GreyMatter:
+
+* Error handling improvements
+* Module system
+* File operations
+* Standard library
+* Package manager
+* Syntax highlighting
+* Bytecode execution
+* Performance optimization
+
+---
+
+# Author
+
+Abinesh N
+
+GitHub
+[https://github.com/Abineshabee](https://github.com/Abineshabee)
+
+---
+
+# License
+
+Created For Educational Purposes.
+
+---
+
+If you want, I can also show you **4 improvements that can make this repo look like a real programming language project and attract recruiters**.
