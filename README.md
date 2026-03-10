@@ -5,6 +5,10 @@
 
 GreyMatter is an experimental programming language developed in Python with the goal of helping students and developers understand how programming languages work internally. The language demonstrates fundamental concepts behind interpreters, lexical analysis, parsing, syntax evaluation, and runtime execution.
 
+<p align="center">
+  <img src="./logo.svg" width="400"/>
+</p>
+
 Unlike production programming languages that prioritize performance and large ecosystems, GreyMatter focuses on simplicity, experimentation, and educational exploration. The syntax is intentionally designed to be simple and expressive so that beginners can easily understand how a custom programming language behaves.
 
 GreyMatter includes many core programming constructs such as variables, arithmetic operations, conditionals, loops, functions, and built-in utilities. The interpreter processes user code through several internal steps including tokenization, parsing, abstract syntax tree construction, and execution.
