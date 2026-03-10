@@ -1,0 +1,85 @@
+<svg width="400" height="440" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3DFF78" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3DFF78" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clip">
+      <circle cx="200" cy="200" r="104"/>
+    </clipPath>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="400" height="440" fill="#0D0D0D"/>
+
+  <!-- Glow -->
+  <circle cx="200" cy="200" r="135" fill="url(#glow)"/>
+
+  <!-- Rotating dial group with SMIL animation -->
+  <g>
+    <!-- Outer dark ring -->
+    <circle cx="200" cy="200" r="119" fill="none" stroke="#222" stroke-width="22"/>
+    <!-- Tick marks -->
+    <g stroke="#3DFF78" stroke-width="1.5" opacity="0.45">
+      <line x1="200" y1="70"  x2="200" y2="84"  transform="rotate(0   200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(30  200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(60  200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="84"  transform="rotate(90  200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(120 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(150 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="84"  transform="rotate(180 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(210 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(240 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="84"  transform="rotate(270 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(300 200 200)"/>
+      <line x1="200" y1="70"  x2="200" y2="78"  transform="rotate(330 200 200)"/>
+    </g>
+    <!-- SMIL rotation animation -->
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 200 200"
+      to="360 200 200"
+      dur="6s"
+      repeatCount="indefinite"/>
+  </g>
+
+  <!-- Black inner fill -->
+  <circle cx="200" cy="200" r="107" fill="#000"/>
+  <!-- Green inner border -->
+  <circle cx="200" cy="200" r="107" fill="none" stroke="#3DFF78" stroke-width="1.5"/>
+
+  <!-- Icon shape -->
+  <g clip-path="url(#clip)">
+    <path d="
+      M 127,127
+      A 104,104 0 0,1 273,127
+      L 226,200
+      L 273,273
+      A 104,104 0 0,1 127,273
+      L 174,200
+      Z
+    " fill="#3DFF78"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="200" y="372"
+    font-family="'Outfit', sans-serif"
+    font-weight="900"
+    font-size="34"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="3">GREY MATTER</text>
+  <text
+    x="200" y="393"
+    font-family="'Outfit', sans-serif"
+    font-weight="300"
+    font-size="9"
+    fill="#3DFF78"
+    text-anchor="middle"
+    letter-spacing="5">PROGRAMMING  LANGUAGE</text>
+</svg>
