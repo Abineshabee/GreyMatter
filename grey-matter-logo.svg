@@ -1,0 +1,68 @@
+<svg width="400" height="440" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" style="background:transparent">
+
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3DFF78" stop-opacity="0.2"></stop>
+      <stop offset="100%" stop-color="#3DFF78" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <clipPath id="clip">
+      <circle cx="200" cy="200" r="104"></circle>
+    </clipPath>
+  </defs>
+
+  <!-- Glow -->
+  <circle cx="200" cy="200" r="135" fill="url(#glow)"></circle>
+
+  <!-- Rotating dial -->
+  <g>
+    <circle cx="200" cy="200" r="119" fill="none" stroke="#222" stroke-width="22"></circle>
+
+    <g stroke="#3DFF78" stroke-width="1.5" opacity="0.45">
+      <line x1="200" y1="70" x2="200" y2="84" transform="rotate(0 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(30 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(60 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="84" transform="rotate(90 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(120 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(150 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="84" transform="rotate(180 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(210 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(240 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="84" transform="rotate(270 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(300 200 200)"></line>
+      <line x1="200" y1="70" x2="200" y2="78" transform="rotate(330 200 200)"></line>
+    </g>
+
+    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="6s" repeatCount="indefinite"></animateTransform>
+  </g>
+
+  <!-- Inner circle -->
+  <circle cx="200" cy="200" r="107" fill="#000"></circle>
+
+  <!-- Inner border -->
+  <circle cx="200" cy="200" r="107" fill="none" stroke="#3DFF78" stroke-width="1.5"></circle>
+
+  <!-- Icon -->
+  <g clip-path="url(#clip)">
+    <path d="
+      M 127,127
+      A 104,104 0 0,1 273,127
+      L 226,200
+      L 273,273
+      A 104,104 0 0,1 127,273
+      L 174,200
+      Z
+    " fill="#3DFF78"></path>
+  </g>
+
+  <!-- Title -->
+  <text x="200" y="372" font-family="Arial, sans-serif" font-weight="900" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">
+    GREY MATTER
+  </text>
+
+  <!-- Subtitle -->
+  <text x="200" y="393" font-family="Arial, sans-serif" font-weight="300" font-size="9" fill="#3DFF78" text-anchor="middle" letter-spacing="5">
+    PROGRAMMING LANGUAGE
+  </text>
+
+</svg>
