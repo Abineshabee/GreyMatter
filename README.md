@@ -840,9 +840,49 @@ GreyMatter helps developers learn:
 * Custom language experimentation
 
 ---
+## How to Run
 
+GreyMatter programs are stored as `.txt` files inside the `Samples` folder.
+
+To run a GreyMatter program, use the following command:
+```bash
+python app.py <your_file_name>.txt
+```
+
+**Example:**
+```bash
+python app.py calculator.txt
+```
+
+> No need to specify the full path. Just provide the file name — GreyMatter automatically looks inside the `Samples` folder.
+
+---
+
+## GreyMatter CLI
+
+When you launch the GreyMatter interpreter, you are greeted with the interactive CLI.
+<p align="center">
+  <img src="Source/CLI.png" width="400">
+</p>
+The CLI supports interactive mode where you can type and execute GreyMatter statements line by line directly in the terminal.
+
+**Example session:**
+```
+>>>> a = 50
+>>>>
+>>>> IF ( a % 2 == 0 ){
+>>>>     PRINT("a is even")
+>>>> } ELSE {
+>>>>     PRINT("a is odd")
+>>>> }
+>>>>
+a is even
+>>>>
+```
+
+The interpreter also supports running `.txt` program files directly via `app.py` as shown in the [How to Run](#how-to-run) section above.
+---
 # Author
-
 Abinesh N
 
 GitHub
