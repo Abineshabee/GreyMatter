@@ -855,14 +855,16 @@ python app.py calculator.txt
 ```
 
 > No need to specify the full path. Just provide the file name — GreyMatter automatically looks inside the `Samples` folder.
-
+<p align="left">
+  <img src="Source/Example.png" width="800">
+</p>
 ---
 
 ## GreyMatter CLI
 
 When you launch the GreyMatter interpreter, you are greeted with the interactive CLI.
-<p align="center">
-  <img src="Source/CLI.png" width="400">
+<p align="left">
+  <img src="Source/CLI.png" width="800">
 </p>
 The CLI supports interactive mode where you can type and execute GreyMatter statements line by line directly in the terminal.
 
