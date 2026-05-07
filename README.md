@@ -1,6 +1,4 @@
 
----
-
 # GreyMatter Programming Language
 
 GreyMatter is an experimental programming language developed in Python with the goal of helping students and developers understand how programming languages work internally. The language demonstrates fundamental concepts behind interpreters, lexical analysis, parsing, syntax evaluation, and runtime execution.
